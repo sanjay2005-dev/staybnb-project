@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations - Staybnb</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/21fa14ae74.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="navBar" class="navbar-white">
+        <a href="index.html"><img src="images/logo-red.png" class="logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Popular Places</a></li>
+            <li><a href="travel.html" class="active">Travel Outside</a></li>
+            <li><a href="listing.html">Online Packages</a></li>
+        </ul>
+        <a href="register.html" class="register-btn">Register Now</a>
+        <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+    </nav>
+
+    <div class="container">
+        <h1 class="sub-title">Explore Amazing Destinations</h1>
+        
+        <div class="travel-outside">
+            <div class="destination-card">
+                <img src="images/bali.png" alt="Bali">
+                <h3>Bali, Indonesia</h3>
+                <p>Experience tropical paradise with stunning beaches and rich culture</p>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/paris.png" alt="Paris">
+                <h3>Paris, France</h3>
+                <p>City of love and lights with iconic landmarks and world-class cuisine</p>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/new-york.png" alt="New York">
+                <h3>New York, USA</h3>
+                <p>The city that never sleeps, filled with energy and endless possibilities</p>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/dubai.png" alt="Dubai">
+                <h3>Dubai, UAE</h3>
+                <p>Modern luxury meets traditional culture in this desert metropolis</p>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/swiss.png" alt="Switzerland">
+                <h3>Swiss Alps</h3>
+                <p>Breathtaking mountain views and pristine alpine landscapes</p>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/new-delhi.png" alt="New Delhi">
+                <h3>New Delhi, India</h3>
+                <p>Rich history, vibrant culture, and incredible architectural wonders</p>
+            </div>
+        </div>
+
+        <h2 class="sub-title">Travel Packages</h2>
+        
+        <div class="travel-packages">
+            <div class="package-card">
+                <h3>Weekend Getaway</h3>
+                <p>Perfect for short trips and quick escapes</p>
+                <ul>
+                    <li>2-3 nights accommodation</li>
+                    <li>Daily breakfast</li>
+                    <li>Local city tour</li>
+                    <li>Airport transfers</li>
+                </ul>
+                <div class="package-price">
+                    <h4>$299 <span>per person</span></h4>
+                </div>
+                <a href="#" class="package-btn">Book Now</a>
+            </div>
+            
+            <div class="package-card">
+                <h3>Adventure Explorer</h3>
+                <p>For thrill-seekers and adventure enthusiasts</p>
+                <ul>
+                    <li>5-7 nights accommodation</li>
+                    <li>All meals included</li>
+                    <li>Adventure activities</li>
+                    <li>Professional guide</li>
+                    <li>Equipment rental</li>
+                </ul>
+                <div class="package-price">
+                    <h4>$799 <span>per person</span></h4>
+                </div>
+                <a href="#" class="package-btn">Book Now</a>
+            </div>
+            
+            <div class="package-card">
+                <h3>Luxury Escape</h3>
+                <p>Premium experience with top-tier amenities</p>
+                <ul>
+                    <li>7-10 nights luxury accommodation</li>
+                    <li>Fine dining experiences</li>
+                    <li>Spa treatments</li>
+                    <li>Private transportation</li>
+                    <li>Concierge services</li>
+                </ul>
+                <div class="package-price">
+                    <h4>$1,999 <span>per person</span></h4>
+                </div>
+                <a href="#" class="package-btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="about-msg">
+            <h2>Why Travel with Staybnb?</h2>
+            <p>We curate the best travel experiences worldwide, ensuring you get the most out of your journey. From budget-friendly adventures to luxury escapes, we have something for every traveler. Our expert team handpicks accommodations and activities to create unforgettable memories.</p>
+        </div>
+
+        <div class="footer">
+            <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <hr>
+            <p>© 2025 Staybnb. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        var navBar = document.getElementById("navBar");
+        function togglebtn() {
+            navBar.classList.toggle("hidemenu");
+        }
+
+        // Add booking functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const packageButtons = document.querySelectorAll('.package-btn');
+            
+            packageButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const packageCard = this.closest('.package-card');
+                    const packageName = packageCard.querySelector('h3').textContent;
+                    const packagePrice = packageCard.querySelector('.package-price h4').textContent;
+                    
+                    if (confirm(`Book ${packageName} for ${packagePrice}?\n\nThis will redirect you to the booking page.`)) {
+                        alert('Booking feature coming soon! Please contact us for reservations.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
