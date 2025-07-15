@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Property Listings - Staybnb</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/21fa14ae74.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="navBar" class="navbar-white">
+            <a href="index.html"><img src="images/logo-red.png" class="logo"></a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Popular Places</a></li>
+                    <li><a href="travel.html">Travel Outside</a></li>
+                    <li><a href="listing.html" class="active">Online Packages</a></li>
+                </ul>
+                <a href="register.html" class="register-btn">Register Now</a>
+                <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+            </nav>
+            
+
+           <div class="container">
+
+    <div class="list-container">
+        <div class="left-col">
+            <p>200+ Options</p>
+            <h1>Recommended Places In San Francisco</h1>
+
+            <!-- Dynamic Listings Container -->
+            <div id="listing-container"></div>
+
+            <!-- Static Listings (Fallback) -->
+            <div id="static-listings">
+            <!-- START OF LISTING 1 -->
+            <div class="house">
+                <div class="house-img">
+                    <a href="house.html"><img src="images/image-s1.png" alt="House Image 1"></a>
+                </div>
+                <div class="house-info">
+                    <p>Private Villa in San Francisco</p>
+                    <h3><a href="house.html">Deluxe Queen Room With Street View</a></h3>
+                    <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="house-price">
+                        <p>2 Guests</p>
+                        <h4>$100 <span>/ day</span></h4>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF LISTING 1 -->
+
+            <!-- COPY THIS BLOCK FOR MORE LISTINGS -->
+            <div class="house">
+                <div class="house-img">
+                    <a href="house.html"><img src="images/image-s2.png" alt="House Image 2"></a>
+                </div>
+                <div class="house-info">
+                    <p>Private Villa in San Francisco</p>
+                    <h3><a href="house.html">Modern Apartment With City View</a></h3>
+                    <p>2 Bedroom / 2 Bathroom / Wifi / Kitchen / Air Conditioning</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="house-price">
+                        <p>4 Guests</p>
+                        <h4>$150 <span>/ day</span></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="house">
+                <div class="house-img">
+                    <a href="house.html"><img src="images/image-s3.png" alt="House Image 3"></a>
+                </div>
+                <div class="house-info">
+                    <p>Hostel in San Francisco</p>
+                    <h3><a href="house.html">Luxury Penthouse Suite</a></h3>
+                    <p>3 Bedroom / 2 Bathroom / Wifi / Kitchen / Air Conditioning / Pool / Gym</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="house-price">
+                        <p>6 Guests</p>
+                        <h4>$200 <span>/ day</span></h4>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <img src="images/arrow.png">
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <img src="images/arrow.png" class="right-arrow">
+            </div>
+
+        </div>
+        <div class="right-col">
+            <div class="sidebar">
+                <h2>Select Filters</h2>
+                <h3>Property Type</h3>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>House</p>
+                    <span>(12)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Hotel</p>
+                    <span>(08)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Home stay</p>
+                    <span>(05)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Apartment</p>
+                    <span>(22)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Resort</p>
+                    <span>(18)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Guest House</p>
+                    <span>(11)</span>
+                </div>
+                <h3>Amenities</h3>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Air Conditioning</p>
+                    <span>(25)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Wifi</p>
+                    <span>(40)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Gym</p>
+                    <span>(15)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Pool</p>
+                    <span>(22)</span>
+                </div>
+                <div class="filter">
+                    <input type="checkbox">
+                    <p>Kitchen</p>
+                    <span>(35)</span>
+                </div>
+                <div class="sidebar-link">
+                    <a href="#">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="footer">
+        <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <hr>
+        <p>© 2025 Staybnb. All Rights Reserved.</p>
+    </div>
+</div>
+
+<script>
+    var navBar = document.getElementById("navBar");
+    function togglebtn() {
+        navBar.classList.toggle("hidemenu");
+    }
+
+    // Dynamic property loading
+    document.addEventListener('DOMContentLoaded', function() {
+        loadProperties();
+    });
+
+    async function loadProperties() {
+        const listingContainer = document.getElementById('listing-container');
+        const staticListings = document.getElementById('static-listings');
+        
+        try {
+            // Try to fetch from backend
+            const response = await fetch('/api/properties');
+            const data = await response.json();
+            
+            if (data.status === 'success' && data.data.length > 0) {
+                // Use dynamic data
+                listingContainer.innerHTML = data.data.map(property => `
+                    <div class="house">
+                        <div class="house-img">
+                            <a href="house.html"><img src="${property.image}" alt="${property.title}"></a>
+                        </div>
+                        <div class="house-info">
+                            <p>${property.type} in ${property.location}</p>
+                            <h3><a href="house.html">${property.title}</a></h3>
+                            <p>${property.bedrooms} Bedroom / ${property.bathrooms} Bathroom / ${property.amenities.join(' / ')}</p>
+                            <div class="rating">
+                                ${generateStars(property.rating)}
+                                <span class="rating-text">(${property.rating})</span>
+                            </div>
+                            <div class="house-price">
+                                <p>${property.guests} Guests</p>
+                                <h4>$${property.price} <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                
+                // Hide static listings
+                staticListings.style.display = 'none';
+            } else {
+                throw new Error('No dynamic data available');
+            }
+        } catch (error) {
+            console.log('Using static listings:', error.message);
+            // Keep static listings visible
+            listingContainer.style.display = 'none';
+        }
+    }
+
+    function generateStars(rating) {
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 !== 0;
+        const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+        
+        let stars = '';
+        
+        for (let i = 0; i < fullStars; i++) {
+            stars += '<i class="fa-solid fa-star"></i>';
+        }
+        
+        if (hasHalfStar) {
+            stars += '<i class="fa-solid fa-star-half-stroke"></i>';
+        }
+        
+        for (let i = 0; i < emptyStars; i++) {
+            stars += '<i class="fa-regular fa-star"></i>';
+        }
+        
+        return stars;
+    }
+</script>
+</body>
+</html>
