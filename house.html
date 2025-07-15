@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>House Details Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/21fa14ae74.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="navBar" class="navbar-white">
+            <a href="index.html">
+                <img src="images/logo-red.png" class="logo">
+            </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Popular Places</a></li>
+                    <li><a href="travel.html">Travel Outside</a></li>
+                    <li><a href="listing.html">Online Packages</a></li>
+                </ul>
+                <a href="#" class="register-btn">Register Now</a>
+                <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+            </nav>
+            <div class="house-details">
+                <div class="house-title">
+                    <h1>Wenge House</h1>
+                    <div class="row">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <span>245 Reviews</span>
+                        </div>
+                        <div>
+                            <p>Location: San Francisco, California, United States</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="gallery-img-1"><img src="images/house-1.png"></div>
+                    <div><img src="images/house-2.png"></div>
+                    <div><img src="images/house-3.png"></div>
+                    <div><img src="images/house-4.png"></div>
+                    <div><img src="images/house-5.png"></div>
+                </div>
+                <div class="small-details">
+                    <h2>Entire rental unit hosted by Brandon</h2>
+                    <p>2 guest &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom</p>
+                    <h4>$ 100 / day</h4>
+                </div>
+                <hr class="line">
+                <form class="check-form">
+                    <div>
+                        <label>Check-in</label>
+                        <input type="text" placeholder="Add Date">
+                    </div>
+                    <div>
+                        <label>Check-out</label>
+                        <input type="text" placeholder="Add Date">
+                    </div>
+                    <div class="guest-field">
+                        <label>Guest</label>
+                        <input type="text" placeholder="2 guest">
+                    </div>
+                    <button type="submit">Check Availablity</button>
+                </form>
+                <ul class="details-list">
+                    <li><i class="fa-solid fa-house"></i>Entire Home
+                        <span>You will the entire flat for you.</span>
+                    </li>
+                    <li><i class="fa-solid fa-paintbrush"></i>Enhanced Clean
+                        <span>This host has commited to staybnb's cleaning process.</span>
+                    </li>
+                    <li><i class="fa-solid fa-location-dot"></i>Great Location
+                        <span>90% of recent guests gave the location a 5 star rating.</span>
+                    </li>
+                    <li><i class="fa-solid fa-heart"></i>Great Check-in Experience
+                        <span>100% of recent guests gave the Check-in process a 5 star rating.</span>
+                    </li>
+                </ul>
+                <hr class="line">
+                <p class="home-desc">Guests will be allocated on the ground floor according to availability. You get 
+                comfortable two bedroom apartment has a true city feeling. The price quoted is for 
+                two guest, at the slot please mark the number of guests to get the exactly price 
+                for groups. The guests will be allocated ground floor according to availability. You 
+                get the comfortable two bedrooms apartment that has a true city feeling.
+                <hr class="line">
+                <div class="map">
+                    <h3>Location on map</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26182.860520986673!2d-122.46584225652641!3d37.758475413286966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1752399319950!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+                    <b>San Francisco, California, United States</b>
+                    <p>It's  like a home away from home.</p>
+                </div>
+                <hr class="line">
+                <div class="host">
+                    <img src="images/host.png">
+                    <div>
+                        <h2>Hosted by Brandon</h2>
+                        <p><span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </span>&nbsp; &nbsp; 245 Reviews &nbsp; &nbsp; response rate 100% &nbsp;&nbsp;&nbsp; &nbsp; Response time:60 min</p>
+                    </div>
+                </div>
+                <a href="#" class="contact-host">Contact Host</a>
+            </div>
+            <div class="container">
+                <div class="footer">
+        <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <hr>
+        <p>© 2025 Staybnb. All Rights Reserved.</p>
+    </div>
+</div>
+<script>
+    var navBar = document.getElementById("navBar");
+    function togglebtn() {
+        navBar.classList.toggle("hidemenu");
+    }
+
+    // Booking form functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkForm = document.querySelector('.check-form');
+        if (checkForm) {
+            // Add date picker functionality
+            const dateInputs = checkForm.querySelectorAll('input[placeholder="Add Date"]');
+            dateInputs.forEach(input => {
+                input.type = 'date';
+                input.style.color = '#333';
+            });
+
+            // Guest input functionality
+            const guestInput = checkForm.querySelector('.guest-field input');
+            if (guestInput) {
+                guestInput.type = 'number';
+                guestInput.min = '1';
+                guestInput.max = '8';
+                guestInput.value = '2';
+            }
+
+            // Form submission
+            checkForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const checkin = this.querySelectorAll('input')[0].value;
+                const checkout = this.querySelectorAll('input')[1].value;
+                const guests = this.querySelector('.guest-field input').value;
+
+                if (checkin && checkout && guests) {
+                    if (new Date(checkin) >= new Date(checkout)) {
+                        alert('Check-out date must be after check-in date');
+                        return;
+                    }
+                    
+                    const nights = Math.ceil((new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24));
+                    const totalPrice = nights * 100; // $100 per night
+                    
+                    if (confirm(`Booking Summary:\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nGuests: ${guests}\nNights: ${nights}\nTotal: $${totalPrice}\n\nProceed with booking?`)) {
+                        alert('Booking request submitted! We will contact you shortly.');
+                    }
+                } else {
+                    alert('Please fill in all fields');
+                }
+            });
+        }
+
+        // Contact host functionality
+        const contactHostBtn = document.querySelector('.contact-host');
+        if (contactHostBtn) {
+            contactHostBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Contact form would open here. Host will be notified of your inquiry.');
+            });
+        }
+    });
+</script>
+    </body>
+    </html>
